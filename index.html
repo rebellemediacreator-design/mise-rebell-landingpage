@@ -40,6 +40,8 @@
         <span class="chip">Offline nutzbar</span>
         <span class="chip">Start über index.html</span>
         <span class="chip">Bereitstellung als ZIP</span>
+        <span class="chip">PWA installierbar</span>
+        <span class="chip">RLS‑geschützt</span>
       </div>
 
       <div class="hero__split" aria-label="Komponenten">
@@ -70,6 +72,7 @@
             <li>Einheitliche Ausbildungsdokumentation (prüfungsnah)</li>
             <li>Keine Abhängigkeit von externen Plattformen / App‑Stores</li>
             <li>Volle Datenhoheit beim Betrieb</li>
+            <li>DB‑gestützt mit <strong>Supabase Auth + RLS</strong>: Nutzer‑/Betriebsdaten strikt getrennt</li>
           </ul>
         </div>
 
@@ -219,13 +222,17 @@
         <div class="card card--soft">
           <h3 class="card__kicker">Technische Rahmenbedingungen</h3>
           <ul class="list">
-            <li>100 % browserbasiert</li>
-            <li>Android & iOS kompatibel</li>
-            <li>Offline nutzbar</li>
-            <li>Start über <strong>index.html</strong></li>
-            <li>Bereitstellung als Dateipaket (ZIP)</li>
-            <li>Keine App‑Stores · Keine laufenden Plattformkosten</li>
-          </ul>
+            <li>100 % browserbasiert (kein Installationsaufwand)</li>
+            <li>Android, iOS, Windows, macOS kompatibel</li>
+            <li><strong>PWA</strong> (Service Worker) · Asset‑Caching aktiv</li>
+            <li><strong>Offline‑first Schreiblogik</strong>: lokale Speicherung + Sync‑Queue (Industrie‑Upgrade, im Rollout/Pilot)</li>
+            <li>Automatische Synchronisation bei Reconnect (Retry/Backoff) · Sichtbarer Sync‑Status</li>
+            <li><strong>Supabase Auth</strong> + <strong>RLS</strong> (user_id = auth.uid()) · sauber getrennte Daten</li>
+            <li>Sitzung persistent (Auto‑Refresh Token) · neues Gerät: einfach neu einloggen</li>
+            <li>Start über <strong>index.html</strong> · Bereitstellung als Dateipaket (ZIP)</li>
+            <li><strong>PDF‑Export</strong> (Berichtsheft) · strukturierter Export (CSV/JSON) in Umsetzung</li>
+            <li>Keine App‑Stores · keine Cloud‑Pflicht · keine laufenden Plattformkosten</li>
+</ul>
         </div>
 
         <div class="card card--pilot">
